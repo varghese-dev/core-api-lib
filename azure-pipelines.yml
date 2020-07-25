@@ -36,6 +36,13 @@ steps:
     OverWrite: true/
   displayName: 'Copy package json'
 
+- task: CopyFiles@2
+  inputs:
+    Contents: '**\README.md'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    OverWrite: true/
+  displayName: 'Copy ReadMe'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
