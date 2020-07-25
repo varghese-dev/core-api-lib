@@ -16,12 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    git config --global user.email "varnit2010@gmail.com"
-    git config --global user.name "Varghese Abraham"
-    npm version patch --force
-  displayName: 'Autoincrement version to PATCH release'
-
-- script: |
     npm install
   displayName: 'npm install'
 
