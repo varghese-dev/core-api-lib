@@ -25,8 +25,8 @@ steps:
   
 - task: CopyFiles@2
   inputs:
-        Contents: '*.tgz'
-        TargetFolder: $(Build.ArtifactStagingDirectory)/dist
+        Contents: 'dist/'
+        TargetFolder: $(Build.ArtifactStagingDirectory)
   displayName: 'Copy archives to artifacts staging directory'
 
 - task: PublishBuildArtifacts@1
