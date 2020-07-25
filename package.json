@@ -1,12 +1,16 @@
 {
   "name": "core-api-lib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core library with all microservice utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepublish": "rimraf dist && npm run build",
-    "publish-lib": "npm run prepublish && npm publish",
+    "pretest": "npm install",
+    "preversion": "npm run test",
+    "version": "",
+    "postversion": "git push && git push --tags",
+    "build:clean": "rimraf dist && npm run build",
+    "publish:lib": "npm run prepublish && npm publish",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
