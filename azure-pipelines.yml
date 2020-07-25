@@ -25,7 +25,7 @@ steps:
   
 - task: CopyFiles@2
   inputs:
-        Contents: 'dist/'
+        SourceFolder: 'dist'
         TargetFolder: $(Build.ArtifactStagingDirectory)
   displayName: 'Copy archives to artifacts staging directory'
 
