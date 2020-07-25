@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "pretest": "npm install",
+    "preversion": "npm run test",
     "version": "",
     "postversion": "git push origin HEAD:master && git push --tags",
     "build:clean": "rimraf dist && npm run build",
