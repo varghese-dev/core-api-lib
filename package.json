@@ -25,7 +25,12 @@
   "author": "Varghese Abraham",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.7",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
   }
 }

@@ -4,3 +4,4 @@
  - JWT authentication (Token generation & verification)
  - API request & response handler
  - Error handlers
+ - logger service
