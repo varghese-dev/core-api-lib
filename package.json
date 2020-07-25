@@ -7,7 +7,7 @@
   "scripts": {
     "pretest": "npm install",
     "version": "",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push origin HEAD:master && git push --tags",
     "build:clean": "rimraf dist && npm run build",
     "publish:lib": "npm run build:clean && npm publish",
     "build": "tsc",
