@@ -16,6 +16,10 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm version patch
+  displayName: 'Autoincrement version to PATCH release'
+
+- script: |
     npm install
   displayName: 'npm install'
 
