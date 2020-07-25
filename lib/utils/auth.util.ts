@@ -2,8 +2,8 @@ import * as bcrypt from 'bcryptjs';
 
 export class Auth {
 
-    MSG_BCRYPT_HASH_ERROR = `Something went wrong while saving password. Please try again!`;
-    MSG_BCRYPT_COMPARE_ERROR = `Password does not match. Please try again!`;
+    public static MSG_BCRYPT_HASH_ERROR = `Something went wrong while saving password. Please try again!`;
+    public static MSG_BCRYPT_COMPARE_ERROR = `Password does not match. Please try again!`;
 
     public static hashPassword(password: string, rounds: number, callback: (error: Error, hash: string) => void) : void {
         bcrypt.hash(password, rounds, (error, hash) => {
