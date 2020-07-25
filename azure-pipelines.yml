@@ -20,7 +20,7 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    npm run prepublish
+    npm run build:clean
   displayName: 'Build the package'
   
 - task: CopyFiles@2
