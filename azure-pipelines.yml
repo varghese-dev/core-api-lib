@@ -29,6 +29,13 @@ steps:
         TargetFolder: $(Build.ArtifactStagingDirectory)
   displayName: 'Copy archives to artifacts staging directory'
 
+- task: CopyFiles@2
+  inputs:
+    Contents: '**\package.json'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    OverWrite: true/
+  displayName: 'Copy package json'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
