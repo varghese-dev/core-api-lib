@@ -6,7 +6,7 @@ export class LoggerService {
     log(level: LOG_LEVEL, message: string) {
         this.logger.log({
             level: level,
-            message: `users-ms ::: ${message}`
+            message: `${message}`
         });
     }
 }
