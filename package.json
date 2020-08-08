@@ -11,8 +11,7 @@
     "postversion": "git push origin HEAD:master && git push --tags",
     "build:clean": "rimraf dist && npm run build",
     "publish:lib": "npm run build:clean && npm publish",
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "keywords": [
     "core-api-lib",
