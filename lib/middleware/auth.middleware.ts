@@ -43,14 +43,11 @@ export const checkJwt = (req: Request, res: Response, next: NextFunction) => {
     next();
 };
 
-export const generateJwt = (username: string, permissions: any) => {
+export const generateJwt = (payload: Object) => {
     if (!authConfig) {
         return 'No auth config found';
     }
-    let jwtPayload = {
-        username: username,
-        permissions: permissions
-    };
+    let jwtPayload = payload;
 
     //The token is valid for 1 hour
     //We want to send a new token on every request
