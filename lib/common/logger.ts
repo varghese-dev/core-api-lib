@@ -1,5 +1,5 @@
-import { createLogger, format, transports, level } from 'winston';
-const { label, combine, timestamp, prettyPrint } = format;
+import { createLogger, format, transports } from 'winston';
+const { combine, timestamp, prettyPrint } = format;
 
 export enum LOG_LEVEL {
     error = 'error',
@@ -18,9 +18,7 @@ const logger = createLogger({
         prettyPrint(),
     ),
     transports: [
-        new transports.Console(),
-        new transports.File({ filename: './error.log', level: 'error' }),
-        new transports.File({ filename: './commonLog.log' }),
+        new transports.Console()
     ],
     exitOnError: false,
 });
