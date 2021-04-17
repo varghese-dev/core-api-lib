@@ -51,8 +51,7 @@ export const generateJwt = (payload: Object) => {
 
     //The token is valid for 1 hour
     //We want to send a new token on every request
-    const newToken = jwt.sign(jwtPayload, authConfig?.privateKey, {
+    return jwt.sign(jwtPayload, authConfig?.privateKey, {
         expiresIn: "1h"
     });
-    return newToken;
 };
