@@ -9,7 +9,7 @@ export enum LOG_LEVEL {
     verbose = 'verbose',
     debug = 'debug',
     silly = 'silly'
-};
+}
 
 const logger = createLogger({
     level: 'info',
